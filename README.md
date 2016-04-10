@@ -1,0 +1,3 @@
+# CAProj1
+windows上的int位数可能与linux上有所不同
+linux上写文件时最好用flush
