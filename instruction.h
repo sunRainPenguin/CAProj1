@@ -1,4 +1,4 @@
-//·´»ã±à¹ý³Ì
+//åæ±‡ç¼–è¿‡ç¨‹
 #pragma once
 #include "Util.h"
 #include "code.h"

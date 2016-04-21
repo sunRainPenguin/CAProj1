@@ -1,4 +1,4 @@
-//汇编代码执行的模拟
+//妯℃嫙姹囩紪浠ｇ爜鎵ц杩囩▼
 #pragma once
 #include "code.h"
 #include "data.h"

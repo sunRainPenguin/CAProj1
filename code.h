@@ -1,4 +1,4 @@
-//表示汇编指令
+//琛ㄧず姹囩紪鎸囦护
 #pragma once
 #include "const.h"
 

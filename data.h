@@ -1,4 +1,4 @@
-//表示数据
+//琛ㄧず鏁版嵁
 #pragma once
 class data
 {
