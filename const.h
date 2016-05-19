@@ -1,5 +1,6 @@
-//包括了一些头文件
+//包括一些头文件
 #include <string>
+#include <cctype>
 #include <bitset>
 #include <iostream>
 #include <fstream>
@@ -10,6 +11,4 @@ using namespace std;
 
 #define maxDigitBitCount 32
 #define regCount 32
-#define dataCount 24
-#define dataBegAdd 148
 #define codeBegAdd 64

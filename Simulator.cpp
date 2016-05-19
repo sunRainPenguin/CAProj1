@@ -18,32 +18,26 @@ void Simulator::reset()
 	cycle = 0;
 	disassembly = "";
 	currentCycleStr = "";
-	for (int i = 0; i < regCount; i++)
-		registers[i] = 0;
-	for (int j = 0; j < dataCount; j++)
-		dataVal[j] = 0;
+	registers.clear();
+	dataVal.clear();
 }
 void Simulator::setInstructionAndData(vector<code*> instructions, vector<data*> dataArray)
 {
-	//for (std::vector<code*>::iterator iter = instructions.begin(); iter != instructions.end(); iter++)
-	//{
-	//	cout << (*iter)->line << " " << (*iter)->opcode << '\n';
-	//}
-	//for (std::vector<data*>::iterator iter = dataArray.begin(); iter != dataArray.end(); iter++)
-	//{
-	//	cout << (*iter)->line << " " << (*iter)->dataValue << '\n';
-	//}
 
 	this->instructions = instructions;
 	this->dataArray = dataArray;
 
 	int index = 0;
-	for (std::vector<data*>::iterator iter = dataArray.begin(); iter != dataArray.end(); iter++)
+	for (std::vector<data*>::iterator iter = dataArray.begin(); iter != dataArray.end(); iter++)		//初始化dataVal数组和registers数组
 	{
-		dataVal[index] = (*iter)->dataValue;
+		/*dataVal[index] = (*iter)->dataValue;*/
+		dataVal.push_back((*iter)->dataValue);
 		index++;
 	}
-
+	dataBegAdd = codeBegAdd + 4 * instructions.size();
+	dataCount = dataArray.size();
+	for (int i = 0; i < 32; i++)
+		registers.push_back(0);
 }
 void Simulator::translate()
 {

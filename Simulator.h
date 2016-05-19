@@ -16,12 +16,14 @@ public:
 
 private:
 	int cycle;
+	int dataBegAdd;
+	int dataCount;
 	string currentCycleStr;
 	string disassembly;
 	vector<code*> instructions;
 	vector<data*> dataArray;
-	int registers[regCount];
-	int dataVal[dataCount];
+	vector<int> registers;
+	vector<int> dataVal;
 
 	ofstream simulationFile;
 
